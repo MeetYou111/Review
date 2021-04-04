@@ -1,0 +1,7 @@
+HashSet、LinkedHashSet、TreeSet的区别？
+HashSet 底层hash表 只是普通存储集合，元素是唯一的
+LinkedHashSet 底层链表和hash表 保证顺序和唯一 特性FIFO(先进先出)
+TreeSet 底层红黑树 数据唯一 和 顺序性， 常用来排序 支持自定义排序（自然排序和比较器排序）
+
+HashSet、LinkedHashSet、TreeSet的相同点？
+都是Set的实现类，数据元素都是唯一的，线程都是不安全的

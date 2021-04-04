@@ -1,0 +1,22 @@
+HashMap、Hashtable、LinkedHashMap、TreeMap的相同点和区别？
+它们都实现于Map接口，key都不能重复，value可以重复
+hashmap和hashtble 不保证数据的顺序，linkedhashmap和treemap保证顺序
+hashmap和linkedhashmap的key可以为空，而treemap不可以 会报错
+hashmap、linkedhashmap、treemap都是线程不安全的，唯有hashtable是线程安全的
+
+List和Map的区别？
+List是存储单列数据的集合，而Map是存储key和value这样的双列数据集合
+List集合是可以重复的，而map的key不可重复，value可以重复
+List是有顺序的，map是无顺序 的
+List继承Collection接口，map呢没有父类
+
+HashMap的底层实现原理？
+HashMap底层是由数组+链表的数据结构，但是在java8后用了红黑树，当然也是有条件的，当链表的长度大于8时，链表
+转换为红黑树，HashMap是通过put和get来存储和获取数据的，当我们使用put方法时，会调用键对象的hashcode方法获得hashcode值，
+通过hashcode来找指定槽位放入数据，当我们使用get方法时，会调用键对象的equals方法来获取键key，然后返回键值value。
+
+hash冲突？
+hash冲突是放生在 ，当我们对象不相同时，它的hash值有可能相同，便会造成hash冲突，在我们HashMap中，它有自己的解决方法，
+就是通过链表，原理是，当我们存入值时，每个槽位都会有一个引用变量，这个引用变量会指向下一个槽位，把不相同对象的hash值
+重新组成链表放入下一个槽位。
+还有一个解决hash冲突的办法就是，开放地址法，是通过一种探测算法，当这个槽位被占用，会找到下一个可以使用的槽位。

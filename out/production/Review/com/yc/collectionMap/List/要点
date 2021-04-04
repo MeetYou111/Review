@@ -1,0 +1,9 @@
+ArrayList、LinkedList、Vector的区别？
+ArrayList和vector底层都是数组结构，而linkedlist底层是链表结构
+ArrayList和linkedlist是线程不安全的，而vector是线程安全的
+ArrayList适合查询和遍历，不适合插入和删除，因为每次插入和删除都需要移动别的元素
+linkedlist适合插入和删除，不适合查询，因为每次查询都需要从头到尾一个一个元素检索
+
+ArrayList和Vector的区别？
+ArrayList是线程不安全的，Vector是线程安全的
+这两个都有自己的自增空间，ArrayList是原来的0.5倍，Vector是原来的1倍
